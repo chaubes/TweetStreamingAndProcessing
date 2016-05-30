@@ -5,7 +5,7 @@ import scala.language.postfixOps
 
 object TwitterStreamer extends App {
 
-  val twitterStream= new TwitterStreamingInitializer("shahrukh")
+  val twitterStream= new TwitterStreamingInitializer("<Text to Filter Streaming tweets>")
 
   twitterStream beginStreaming
 
