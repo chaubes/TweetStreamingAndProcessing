@@ -1,9 +1,11 @@
-# TweetStreamingAndProcessing
-Sample scala app to stream twitter tweets and process them using akka and akka-http.<br/>
-The basic function of this scala application is to capture the streaming tweets filtered on the basis of provided
-input text. At the same time it involves asynchronous processing of the captured tweet text without pausing the tweet streaming action.
-The tweet streaming and capture is implemented using akka-http while the asynchronous tweet processing is implemented
-using akka actors.
+# Sample Scala App to Stream and Process tweets
+  Technologies used: scala, akka and akka-http 
+
+**Purpose of this application:**
+  The basic function of this scala application is to capture the streaming tweets filtered on the basis of provided input text. (_For Example :"iphone"_)
+  And also the processing of the captured tweets happens _asynchronously_ without pausing the stream. 
+
+  The tweet streaming and capturing is implemented using akka-http while the _asynchronous_ tweet processing is implemented using akka actors.
 
 In order to start streaming and processing the tweets, follow the below steps:
 
