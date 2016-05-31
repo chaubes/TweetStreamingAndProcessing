@@ -3,7 +3,7 @@ name := "TweetStreamingAndProcessing"
 version := "1.0"
 
 scalaVersion := "2.11.7"
-scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf8","-target:jvm-1.8")
+scalacOptions := Seq("-unchecked", "-feature", "-deprecation", "-encoding", "utf8")
 
 libraryDependencies ++= {
   val akkaStreamV      = "1.0"

@@ -9,6 +9,14 @@ import scala.concurrent.duration._
 import scala.concurrent.{Await, Future}
 import scala.util.{Failure, Success, Try}
 
+/**
+ * OAuth trait defines the methods to generate the OAuthHttpHeaders
+ * required to authorize the twitter api call. This trait hides
+ * the complexity involved in getting the OAuthHttpHeaders from the
+ * developer. This methods defined in this trait can be re-used
+ * in any application which involves getting the OAuthHttpHeaders
+ * based on the Consumer and Token keys and values.
+ */
 trait OAuth extends BaseService{
   case class Consumer(key: String, secret: String)
   case class Token(value: String, secret: String)

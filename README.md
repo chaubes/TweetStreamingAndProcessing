@@ -9,7 +9,7 @@ In order to start streaming and processing the tweets, follow the below steps:
 
 1) Update the application.conf file with your actual property values for the below props placeholders inorder to enable 
    twitter streaming on your machine:-
-   <br/><br/><i>
+   <br/><i>
     twitterAppConsumerKey = "\<twitterAppConsumerKey\>"<br/>
     twitterAppConsumerSecret = "\<twitterAppConsumerSecret\>"<br/>
     twitterAppAccessToken = "\<twitterAppAccessToken\>"<br/>
@@ -20,9 +20,24 @@ In order to start streaming and processing the tweets, follow the below steps:
     
 2) In the TwitterStreamer object, replace the text "<Text to Filter Streaming tweets>"  with the appropriate text related 
    to which you want the tweets to be streamed and processed.
+ 
+# Application extension   
+1) This application can be extended to support any streaming api which requires OAuth authorization for the requests.
+   The files in the package example.tweet.stream.process.common can be used as base files for any application dealing with akka-http
+   and akka.
+
+2) In order to provide your own custom implementation for capturing streaming tweets and processing:-
    
-In order to extend this sample app to provide your own implementations for tweet capture and processing, you just
-need to write your custom implementations of TwitterStreamingService and akka actors like TweetConsumer as well as TweetProcessor.
+   a) Provide your custom TwitterStreamingService implementation which initializes the access token properties for Twitter streaming api.
+      Also, It should contain the definition of a callback method like tweetStreamProcessingFunction for performing actions 
+      on the captured streaming tweets.
+      
+   b) Provide your custom implementation of akka actors TweetConsumer and TweetProcessor in order to process the captured 
+      tweets asynchronously.
+      
+   c) Update the case class Tweet and TweetAnalysisResponse if you require more custom fields in these domain objects.
+      
+   d) Provide your own custom initializer class similar to the TwitterStreamingInitializer.   
     
     
     

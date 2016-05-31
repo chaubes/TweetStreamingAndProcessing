@@ -7,7 +7,14 @@ import com.hunorkovacs.koauth.service.consumer.DefaultConsumerService
 
 import scala.concurrent.ExecutionContextExecutor
 
-
+/**
+ *
+ * @param textInput
+ * TwitterStreamingInitializer class contains the method implementations
+ * for beginStreaming() and endStreaming() operations for a specific
+ * textInput. The instance of this class behaves as a controller for
+ * starting and shuttingDown tweet streaming and processing operations.
+ */
 class TwitterStreamingInitializer(textInput: String) extends TwitterStreamingService{
   override protected implicit val system: ActorSystem = ActorSystem(serviceName)
   override protected implicit val materializer: ActorMaterializer = ActorMaterializer()
