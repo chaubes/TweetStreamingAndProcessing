@@ -9,7 +9,12 @@ import org.json4s.native.JsonMethods._
 import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
 
-
+/**
+ * TwitterStreamingService provides a custom implementation for initializing
+ * the access token properties for Twitter streaming api.
+ * It also provides a definition of a callback method tweetStreamProcessingFunction
+ * for performing actions on the captured streaming tweets.
+ */
 trait TwitterStreamingService extends StreamingService with Config with OAuth{
  case class TwitterStreamMessage(textInput: String)
 
@@ -24,6 +29,12 @@ trait TwitterStreamingService extends StreamingService with Config with OAuth{
   protected def consumerRef: ActorRef
   protected def trackText: String
 
+  /**
+   *
+   * @param request
+   * tweetStreamProcessingFunction method is a callback method for performing
+   * actions on the captured streaming tweets
+   */
   protected def tweetStreamProcessingFunction(request: Future[HttpResponse]) : Unit = {
     request.flatMap { response =>
       if (response.status.intValue() != 200) {

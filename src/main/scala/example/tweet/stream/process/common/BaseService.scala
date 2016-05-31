@@ -10,6 +10,12 @@ import spray.json.DefaultJsonProtocol
 
 import scala.concurrent.{ExecutionContextExecutor, Future}
 
+/**
+ * BaseService trait represents the top most member in the hierarchy
+ * which declares all the initial parameters which are necessary for
+ * the operations with akk-http and akka.
+ * BaseService can be extended to initialize any service for akka-http and akka.
+ */
 trait BaseService extends DefaultJsonProtocol with SprayJsonSupport {
   protected implicit def serviceName: String
   protected implicit def system: ActorSystem
