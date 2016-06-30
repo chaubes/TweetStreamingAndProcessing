@@ -1,6 +1,6 @@
 # Sample Scala App to Stream and Process tweets
 
-[![Build Status](https://api.travis-ci.org/chaubes/TweetStreamingAndProcessing.svg?branch=master)](https://api.travis-ci.org/chaubes/TweetStreamingAndProcessing.svg?branch=master)
+[![Build Status](https://api.travis-ci.org/chaubes/TweetStreamingAndProcessing.svg?branch=master)](https://travis-ci.org/chaubes/TweetStreamingAndProcessing)
 <br/>  Technologies used: scala, akka and akka-http 
 
 **Purpose of this application:**
