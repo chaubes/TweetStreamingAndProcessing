@@ -1,7 +1,7 @@
 # Sample Scala App to Stream and Process tweets
 
 [![Build Status](https://api.travis-ci.org/chaubes/TweetStreamingAndProcessing.svg?branch=master)](https://api.travis-ci.org/chaubes/TweetStreamingAndProcessing.svg?branch=master)
-  Technologies used: scala, akka and akka-http 
+<br/>  Technologies used: scala, akka and akka-http 
 
 **Purpose of this application:**
   The basic function of this scala application is to capture the streaming tweets filtered on the basis of provided input text. (_For Example :"iphone"_)
